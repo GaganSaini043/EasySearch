@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/restaurantFragment4">
+    <fragment
+        android:id="@+id/restaurantFragment4"
+        android:name="app.quickfood.view.RestaurantFragment"
+        android:label="fragment_restaurant"
+        tools:layout="@layout/fragment_restaurant" />
+    <fragment
+        android:id="@+id/cafeFragment3"
+        android:name="app.quickfood.view.CafeFragment"
+        android:label="fragment_cafe"
+        tools:layout="@layout/fragment_cafe" />
+    <fragment
+        android:id="@+id/hospital4"
+        android:name="app.quickfood.view.Hospital"
+        android:label="fragment_hospital"
+        tools:layout="@layout/fragment_hospital" />
+    <fragment
+        android:id="@+id/parkFragment3"
+        android:name="app.quickfood.view.ParkFragment"
+        android:label="fragment_park"
+        tools:layout="@layout/fragment_park" />
+    <fragment
+        android:id="@+id/parkingFragment3"
+        android:name="app.quickfood.view.ParkingFragment"
+        android:label="fragment_parking"
+        tools:layout="@layout/fragment_parking" />
+</navigation>

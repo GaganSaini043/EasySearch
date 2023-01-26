@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">QuickFood</string>
+    <string name="app_name">Search Near</string>
+    <string name="main_button_text">Let"'"s Explore</string>
+    <string name="main_screen_text">Find Near By Places</string>
+    <string name="main_screen_text_second">Find your near by amenities on just a single click</string>
+    <string name="menu_restaurants">Restaurants</string>
+    <string name="menu_cafe">Cafe"'"s</string>
+    <string name="menu_hospital">Hospitals</string>
+    <string name="menu_parks">Parks</string>
+    <string name="menu_parking">Parking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

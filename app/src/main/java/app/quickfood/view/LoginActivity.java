@@ -3,7 +3,6 @@ package app.quickfood.view;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -16,11 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -120,8 +116,8 @@ public class LoginActivity extends AppCompatActivity {
                         if (user.equals(username) && password.equals((pswrd))) {
 
                             if(type.equalsIgnoreCase("login")){
-                                Intent intent = new Intent(getApplicationContext(),HomeScreen.class);
-                                startActivity(intent);
+//                                Intent intent = new Intent(getApplicationContext(),HomeScreen.class);
+//                                startActivity(intent);
                             }
                             else if(type.equalsIgnoreCase("signup")){
                                 Log.d("success22", "User Exists");
@@ -161,8 +157,8 @@ public class LoginActivity extends AppCompatActivity {
                 public void onSuccess(DocumentReference documentReference) {
 
                     Log.d("added", "DocumentSnapshot successfully written!");
-                    Intent intent = new Intent(getApplicationContext(),HomeScreen.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(getApplicationContext(),HomeScreen.class);
+//                    startActivity(intent);
                     Toast.makeText(LoginActivity.this, "Signed Up Successfully", Toast.LENGTH_SHORT).show();
                 }
             })
@@ -175,30 +171,5 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
-
-
-
-//    public void addToFirebase(String username, String password){
-//        loginModel.setUsername(username);
-//        loginModel.setPassword(password);
-//
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//               // String value = snapshot.getValue(String.class);
-//                loginModel = new LoginModel(username, password);
-//                databaseReference.child("users").setValue(loginModel);
-//                Toast.makeText(LoginActivity.this,"Data Added..", Toast.LENGTH_SHORT).show();
-//
-//                Log.d("onDataChange: ", "loginModel.." + loginModel);            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(LoginActivity.this,"Error" , Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//    }
 
 }
